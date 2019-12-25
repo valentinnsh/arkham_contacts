@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>Arkham Advertiser</h1>
+
+  <p>Добро пожаловать на <em>Arkham Advertiser</em> агрегатор контактов базовой игры и площадка, на которой каждый может расширить вариативность происходящих с игроками событий своими силами!</p>
+
+<h2>Прямо сейчас у нас:</h2>
+  <ul>
+    <li><strong>Дополнений :</strong> {{ num_expansions }}</li>
+    <li><strong>Локаций:</strong> {{ num_locations}}</li>
+    <li><strong>Различных контактов:</strong> {{ num_contacts }}</li>
+  </ul>
+
+{% endblock %}

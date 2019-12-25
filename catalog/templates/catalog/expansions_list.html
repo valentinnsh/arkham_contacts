@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+    <h1 class = "mb-3">Список дополнений</h1>
+    <li><a href="{% url 'expansions_create' %}">Добавить Новое дополнение</a></li>
+    {% if expansions_list %}
+    <ul>
+      {% for expansion in expansions_list %}
+       <article class="media content-section">
+        <a href="{{ expansion.get_absolute_url }}">{{ expansion.expansion_name }}</a> ({{expansion.creator}})
+	</article>
+    {% endfor %}
+
+    
+    </ul>
+    {% endif %}
+{% endblock %}

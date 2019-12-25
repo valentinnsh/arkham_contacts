@@ -1,0 +1,14 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>Удалить Дополнение</h1>
+
+<p>Вы уверены что хотите удалить это дополнение: {{ expansions }}?</p>
+
+<form action="" method="POST">
+  {% csrf_token %}
+  <input type="submit" action="" value="Да, удаляем" />
+</form>
+
+{% endblock %}

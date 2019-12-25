@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>{{ object.location_name }}</h1>
+
+<ul class="sidebar-nav">
+  <li><a href="{% url 'locations_delete' object.id%}">Удалить Локацию</a></li>
+  <li><a href="{% url 'locations_update' object.id%}">Переименовать Локацию</a></li>
+<ul class="sidebar-nav">
+
+</ul>
+<ul>
+
+</ul>
+{% endblock %}
+

@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>{{ object.expansion_name }}</h1>
+
+<ul class="sidebar-nav">
+  <li><a href="{% url 'expansions_delete' object.id%}">Удалить Дополнение</a></li>
+  <li><a href="{% url 'expansions_update' object.id%}">Переименовать Дополнение</a></li>
+<ul class="sidebar-nav">
+
+</ul>
+<ul>
+
+  {% for location in  locations%}
+    <li>
+      <a href = "{% url 'locations_detail' location.id%}">{{ location.location_name }}</a> <b>({{location.creator}}) </b>
+    </li>
+    {% endfor %}
+
+</ul>
+{% endblock %}

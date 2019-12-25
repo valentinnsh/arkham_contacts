@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<h1>{{ object.location }}</h1>
+
+<ul class="sidebar-nav">
+  <li><a href="{% url 'contacts_delete' object.id%}">Удалить Контакт</a></li>
+  <li><a href="{% url 'contacts_update' object.id%}">Изменить Контакт</a></li>
+<ul class="sidebar-nav">
+
+    <p>{{object.incident}}</p>
+
+</ul>
+<ul>
+
+</ul>
+{% endblock %}
